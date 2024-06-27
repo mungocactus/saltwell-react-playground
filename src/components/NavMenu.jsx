@@ -7,10 +7,10 @@ export default function NavMenu() {
 				Home
 			</NavLink>
 			<NavLink
-				to="/nasa"
+				to="/tictactoe"
 				className={({ isActive }) => (isActive ? "active" : " ")}
 			>
-				NASA
+				Tic Tac Toe
 			</NavLink>
 			<NavLink
 				to="/weather"
@@ -19,10 +19,10 @@ export default function NavMenu() {
 				Weather
 			</NavLink>
 			<NavLink
-				to="/tictactoe"
+				to="/nasa"
 				className={({ isActive }) => (isActive ? "active" : " ")}
 			>
-				Tic Tac Toe
+				NASA
 			</NavLink>
 		</nav>
 	);
