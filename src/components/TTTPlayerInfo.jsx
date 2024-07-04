@@ -1,6 +1,10 @@
 import { useState } from "react";
 
-export default function TTTPlayerInfo({ playerSymbol, defaultPlayerName }) {
+export default function TTTPlayerInfo({
+	playerSymbol,
+	defaultPlayerName,
+	isActive,
+}) {
 	let [playerPersonalName, setPlayerPersonalName] = useState(defaultPlayerName);
 	let [isEditing, setIsEditing] = useState(false);
 
@@ -12,7 +16,9 @@ export default function TTTPlayerInfo({ playerSymbol, defaultPlayerName }) {
 		setPlayerPersonalName(event.target.value);
 	}
 
-	let playerName = <h4>{playerPersonalName}</h4>;
+	let playerName = (
+		<h4 className={isActive ? "active" : undefined}>{playerPersonalName}</h4>
+	);
 
 	if (isEditing) {
 		playerName = (

@@ -10,6 +10,10 @@
 		width: 100px;
 	}
 
+	h4 {
+		letter-spacing: 3px;
+	}
+
 	.players-information-container {
 		background-color: #000;
 		border-radius: 10px;
@@ -59,7 +63,8 @@
 		}
 
 		p {
-			font-size: 26px;
+			font-size: 20px;
+			line-height: 2;
 			margin: 0;
 		}
 
@@ -73,6 +78,31 @@
 			margin-right: 10px;
 			text-align: center;
 			width: 40px;
+		}
+
+		.active {
+			color: #ffcc00;
+		}
+	}
+
+	.game-board {
+		display: flex;
+		margin-bottom: 100px;
+
+		button {
+			background-color: #000;
+			border: none;
+			color: #ff9d00;
+			border-radius: 5px;
+			font-family: "Gill Sans", sans-serif;
+			font-size: 20px;
+			margin: 7px;
+			height: 100px;
+			width: 100px;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 }
