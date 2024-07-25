@@ -6,10 +6,32 @@ import TTTGameBoard from "./TTTGameBoard.jsx";
 
 export default function PageTicTacToe() {
 	let [activePlayer, setActivePlayer] = useState("O");
+	let [gameTurns, setGameTurns] = useState([]);
 
-	function playSelectActive() {
+	function playSelectActive(indexRow, indexColin) {
 		setActivePlayer((currentPlayer) => (currentPlayer === "O" ? "X" : "O"));
 		console.log("worked", activePlayer);
+		setGameTurns((previousTurns) => {
+			let currentActivePlayer = "O";
+
+			if (previousTurns.length > 0 && previousTurns[0].player === "0") {
+				currentActivePlayer = "X";
+			}
+
+			const updatedTurns = [
+				{
+					square: {
+						row: indexRow,
+						col: indexColin,
+					},
+					player: currentActivePlayer,
+				},
+				...previousTurns,
+			];
+
+			console.log(updatedTurns);
+			return updatedTurns;
+		});
 	}
 
 	return (
@@ -32,7 +54,8 @@ export default function PageTicTacToe() {
 				</div>
 				<TTTGameBoard
 					playSelectSquare={playSelectActive}
-					bingoActivePlayer={activePlayer}
+					// bingoActivePlayer={activePlayer}
+					turns={gameTurns}
 				/>
 			</section>
 		</div>

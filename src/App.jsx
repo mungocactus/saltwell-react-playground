@@ -8,7 +8,6 @@ const routerVariable = createBrowserRouter([
 	{ path: "/", element: <PageHome /> },
 	{ path: "/nasa", element: <PageNasa /> },
 	{ path: "/weather", element: <PageWeather /> },
-	{ path: "/tictactoe", element: <PageTicTacToe /> },
 ]);
 
 function App() {
