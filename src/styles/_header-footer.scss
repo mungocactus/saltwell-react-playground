@@ -1,0 +1,26 @@
+.heading {
+	margin-bottom: 65px;
+}
+
+.header-title {
+	line-height: 0.85;
+	margin: 0px;
+}
+
+footer {
+	margin: 0 0 100px 100px;
+
+	h3 {
+		margin: 0 0 6px 50px;
+	}
+
+	a {
+		font-size: 20px;
+		margin: 0 0 0 50px;
+		text-decoration: none;
+
+		&:hover {
+			color: #ea7d17;
+		}
+	}
+}
