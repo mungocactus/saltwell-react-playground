@@ -1,0 +1,56 @@
+.weather {
+	display: flex;
+	flex-direction: row;
+	width: 665px;
+
+	.weather-left {
+		width: 275px;
+	}
+
+	.weather-right {
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 55px;
+	}
+
+	h4 {
+		font-size: 21px;
+		margin: 0 0 20px;
+		text-align: center;
+	}
+
+	.calendar {
+		margin-left: 0;
+
+		h2 {
+			font-style: italic;
+			font-size: 55px;
+		}
+
+		h3 {
+			display: none;
+		}
+	}
+
+	.weather-main {
+		font-size: 52px;
+		margin-top: 38px;
+	}
+
+	.weather-temp {
+		font-family: "Josefin Sans", sans-serif;
+		font-size: 80px;
+		margin-bottom: 8px;
+	}
+
+	.weather-location {
+		font-size: 30px;
+		font-weight: 300;
+	}
+
+	.weather-extra {
+		margin-bottom: 85px;
+	}
+}
