@@ -1,6 +1,6 @@
 import { WEEK_DAYS, MONTHS } from "../data.js";
 
-export default function ShowDate() {
+export default function ShowDate({ weekday, dateOf }) {
 	const currentTime = new Date();
 
 	return (

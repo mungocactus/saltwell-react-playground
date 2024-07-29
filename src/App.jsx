@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import PageHome from "./components/PageHome.jsx";
 import PageNasa from "./components/PageNasa.jsx";
 import PageWeather from "./components/PageWeather.jsx";
-import PageTicTacToe from "./components/PageTicTacToe.jsx";
 
 const routerVariable = createBrowserRouter([
 	{ path: "/", element: <PageHome /> },
