@@ -234,8 +234,78 @@ footer a:hover {
   cursor: pointer;
 }
 
+.weather {
+  display: flex;
+  flex-direction: row;
+  width: 665px;
+}
+.weather .weather-left {
+  width: 275px;
+}
+.weather .weather-right {
+  width: 100%;
+}
 .weather h1 {
-  font-size: 90px;
+  font-size: 55px;
+}
+.weather h4 {
+  font-size: 21px;
+  margin: 0 0 20px;
+  text-align: center;
+}
+.weather .calendar {
+  margin-left: 0;
+}
+.weather .calendar h2 {
+  font-style: italic;
+  font-size: 55px;
+}
+.weather .calendar h3 {
+  display: none;
+}
+.weather .weather-main {
+  font-size: 52px;
+  margin-top: 38px;
+}
+.weather .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  white-space: break-spaces;
+}
+.weather .item {
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.weather .weather-temp {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 80px;
+  margin-bottom: 8px;
+}
+.weather .weather-location {
+  font-size: 30px;
+  font-weight: 300;
+}
+.weather .weather-extra {
+  margin-bottom: 85px;
+}
+.weather .freeze {
+  color: #cceaf2;
+}
+.weather .cold {
+  color: #e0e2e2;
+}
+.weather .cool {
+  color: #bfbebb;
+}
+.weather .mild {
+  color: #9f8c7d;
+}
+.weather .warm {
+  color: #e0874a;
+}
+.weather .hot {
+  color: #ffb600;
 }
 
 /*# sourceMappingURL=index.css.map */

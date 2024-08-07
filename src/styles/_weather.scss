@@ -39,6 +39,22 @@
 		margin-top: 38px;
 	}
 
+	.details {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		white-space: break-spaces;
+	}
+
+	.item {
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+
+	.value {
+		// line-height: 0.75;
+	}
+
 	.weather-temp {
 		font-family: "Josefin Sans", sans-serif;
 		font-size: 80px;
@@ -52,5 +68,29 @@
 
 	.weather-extra {
 		margin-bottom: 85px;
+	}
+
+	.freeze {
+		color: #cceaf2;
+	}
+
+	.cold {
+		color: #e0e2e2;
+	}
+
+	.cool {
+		color: #bfbebb;
+	}
+
+	.mild {
+		color: #9f8c7d;
+	}
+
+	.warm {
+		color: #e0874a;
+	}
+
+	.hot {
+		color: #ffb600;
 	}
 }
