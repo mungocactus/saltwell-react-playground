@@ -46,9 +46,15 @@ h3 {
 nav {
 	display: flex;
 	justify-content: start;
-	margin: 0 0 60px 8px;
+	flex-direction: column;
+	margin: 0 0 60px 0;
+
+	@media (min-width: 501px) {
+		flex-direction: row;
+	}
 
 	a {
+		color: #8c8a8a;
 		font-size: 24px;
 		text-decoration: none;
 		margin-right: 10px;
@@ -75,5 +81,14 @@ nav {
 	img {
 		height: 40px;
 		width: 40px;
+		margin-right: 15px;
+
+		@media (min-width: 1201px) {
+			margin-right: 25px;
+		}
+
+		@media (min-width: 1201px) {
+			margin-right: 0;
+		}
 	}
 }

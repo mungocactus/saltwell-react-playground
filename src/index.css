@@ -44,9 +44,16 @@ h3 {
 nav {
   display: flex;
   justify-content: start;
-  margin: 0 0 60px 8px;
+  flex-direction: column;
+  margin: 0 0 60px 0;
+}
+@media (min-width: 501px) {
+  nav {
+    flex-direction: row;
+  }
 }
 nav a {
+  color: #8c8a8a;
   font-size: 24px;
   text-decoration: none;
   margin-right: 10px;
@@ -70,6 +77,17 @@ nav .active {
 .nav-container img {
   height: 40px;
   width: 40px;
+  margin-right: 15px;
+}
+@media (min-width: 1201px) {
+  .nav-container img {
+    margin-right: 25px;
+  }
+}
+@media (min-width: 1201px) {
+  .nav-container img {
+    margin-right: 0;
+  }
 }
 
 .heading {
@@ -234,23 +252,89 @@ footer a:hover {
   cursor: pointer;
 }
 
+.weatherpage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 1201px) {
+  .weatherpage {
+    flex-direction: row;
+  }
+}
+.weatherpage .right-column {
+  margin: 0;
+  width: 100%;
+}
+@media (min-width: 501px) {
+  .weatherpage .right-column {
+    margin: 0 30px 0 10px;
+  }
+}
+@media (min-width: 1201px) {
+  .weatherpage .right-column {
+    width: 665px;
+  }
+}
+.weatherpage .left-column {
+  text-align: right;
+}
+.weatherpage .left-column img {
+  width: 100%;
+  margin-top: 30px;
+}
+@media (min-width: 1201px) {
+  .weatherpage .left-column img {
+    max-width: 750px;
+    margin-top: 0;
+  }
+}
+.weatherpage .header-title {
+  color: #000;
+}
+
 .weather {
   display: flex;
-  flex-direction: row;
-  width: 665px;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 501px) {
+  .weather {
+    flex-direction: row;
+    margin-top: 50px;
+  }
+}
+@media (min-width: 1201px) {
+  .weather {
+    width: 665px;
+  }
 }
 .weather .weather-left {
   width: 275px;
 }
+.weather .weather-left .heading {
+  margin-bottom: 36px;
+}
+@media (min-width: 501px) {
+  .weather .weather-left .heading {
+    margin-bottom: 65px;
+  }
+}
 .weather .weather-right {
+  margin-top: 38px;
   width: 100%;
+}
+@media (min-width: 501px) {
+  .weather .weather-right {
+    margin-top: 0;
+  }
 }
 .weather h1 {
   font-size: 55px;
 }
 .weather h4 {
   font-size: 21px;
-  margin: 0 0 20px;
+  margin: 0 0 5px;
   text-align: center;
 }
 .weather .calendar {
@@ -265,7 +349,6 @@ footer a:hover {
 }
 .weather .weather-main {
   font-size: 52px;
-  margin-top: 38px;
 }
 .weather .details {
   display: flex;
@@ -279,15 +362,23 @@ footer a:hover {
 }
 .weather .weather-temp {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 80px;
-  margin-bottom: 8px;
+  font-size: 90px;
+}
+.weather .weather-info {
+  margin-bottom: 0;
 }
 .weather .weather-location {
-  font-size: 30px;
+  font-size: 55px;
   font-weight: 300;
+  line-height: 0.85;
+  margin-bottom: 50px;
 }
 .weather .weather-extra {
-  margin-bottom: 85px;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 28px;
+  margin-bottom: 127px;
+  line-height: 0;
 }
 .weather .freeze {
   color: #cceaf2;

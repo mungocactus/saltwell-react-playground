@@ -121,8 +121,41 @@ export default function PageWeather() {
 		}
 	}
 
+	let direction = weather.windDirection;
+	let compassPoint = "";
+	console.log(direction);
+
+	switch (true) {
+		case direction > 337:
+			compassPoint = "N";
+			break;
+		case direction > 293:
+			compassPoint = "NW";
+			break;
+		case direction > 248:
+			compassPoint = "W";
+			break;
+		case direction > 203:
+			compassPoint = "SW";
+			break;
+		case direction > 158:
+			compassPoint = "S";
+			break;
+		case direction > 113:
+			compassPoint = "SE";
+			break;
+		case direction > 68:
+			compassPoint = "E";
+			break;
+		case direction > 23:
+			compassPoint = "NE";
+			break;
+		default:
+			compassPoint = "N";
+	}
+
 	return (
-		<div className="homepage">
+		<div className="weatherpage">
 			<section className="right-column">
 				<NavMenu />
 				<div className="weather">
@@ -138,21 +171,21 @@ export default function PageWeather() {
 					</section>
 					<section className="weather-right">
 						<h4 className="weather-location">{weather.location}</h4>
+						<h4 className="weather-info">Current Temp</h4>
+						<h4 className={weatherTemp}>{Math.round(weather.temp)}</h4>
 						<h4 className="weather-main">{weather.overall}</h4>
 						<h4 className="weather-extra">{weather.description}</h4>
-						<h4>Current Temp</h4>
-						<h4 className={weatherTemp}>{Math.round(weather.temp)}</h4>
-						<div className="details">
-							<h4 className="item">Humidity ... </h4>
-							<h4 className="value">{weather.humidity}%</h4>
-						</div>
 						<div className="details">
 							<h4 className="item">Wind Speed ... </h4>
 							<h4 className="value">{Math.round(weather.windSpeed)} kpm</h4>
 						</div>
 						<div className="details">
 							<h4 className="item">Wind Direction ... </h4>
-							<h4 className="value">{weather.windDirection}</h4>
+							<h4 className="value">{compassPoint}</h4>
+						</div>
+						<div className="details">
+							<h4 className="item">Humidity ... </h4>
+							<h4 className="value">{weather.humidity}%</h4>
 						</div>
 						<div className="details">
 							<h4 className="item">Barometric Pressure ... </h4>
