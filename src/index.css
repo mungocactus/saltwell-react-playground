@@ -95,29 +95,60 @@ nav .active {
 }
 
 .header-title {
+  font-size: 65px;
   line-height: 0.85;
   margin: 0px;
 }
+@media (min-width: 501px) {
+  .header-title {
+    font-size: 100px;
+  }
+}
+@media (min-width: 701px) {
+  .header-title {
+    font-size: 150px;
+  }
+}
 
 footer {
-  margin: 0 0 100px 100px;
+  margin: 0 0 100px 50px;
+}
+@media (min-width: 501px) {
+  footer {
+    margin: 0 0 100px 100px;
+  }
 }
 footer h3 {
-  margin: 0 0 6px 50px;
+  margin: 0 0 6px 0;
+}
+@media (min-width: 501px) {
+  footer h3 {
+    margin: 0 0 6px 50px;
+  }
 }
 footer a {
   font-size: 20px;
-  margin: 0 0 0 50px;
+  margin: 0;
   text-decoration: none;
 }
 footer a:hover {
   color: #ea7d17;
 }
+@media (min-width: 501px) {
+  footer a {
+    margin: 0 0 0 50px;
+  }
+}
 
 .homepage {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
+}
+@media (min-width: 1201px) {
+  .homepage {
+    flex-direction: row;
+  }
 }
 
 .left-column {
@@ -129,16 +160,32 @@ footer a:hover {
 }
 
 .right-column {
-  margin: 0 30px 0 10px;
-  width: 665px;
+  margin: 0;
+  width: 100%;
+}
+@media (min-width: 1201px) {
+  .right-column {
+    margin: 0 30px 0 10px;
+    width: 665px;
+  }
 }
 
 .calendar {
-  margin-left: 100px;
+  margin-left: 0;
+}
+@media (min-width: 501px) {
+  .calendar {
+    margin-left: 100px;
+  }
 }
 .calendar h2 {
-  font-size: 75px;
+  font-size: 65px;
   margin: 0;
+}
+@media (min-width: 501px) {
+  .calendar h2 {
+    font-size: 75px;
+  }
 }
 
 .date {
@@ -146,18 +193,34 @@ footer a:hover {
   flex-direction: row;
 }
 .date h3 {
-  font-size: 28px;
+  font-size: 21px;
   letter-spacing: 6px;
-  margin: 0 0 0 50px;
+  margin: 0 0 0 5px;
+}
+@media (min-width: 501px) {
+  .date h3 {
+    font-size: 28px;
+    margin: 0 0 0 50px;
+  }
 }
 
 .clockTimer {
-  margin: -20px 0 50px 100px;
+  margin: 0 0 50px 50px;
+}
+@media (min-width: 501px) {
+  .clockTimer {
+    margin: -20px 0 50px 100px;
+  }
 }
 .clockTimer h3 {
   font-size: 50px;
   letter-spacing: 10px;
-  margin: 0 0 0 50px;
+  margin: 0;
+}
+@media (min-width: 501px) {
+  .clockTimer h3 {
+    margin: 0 0 0 50px;
+  }
 }
 
 .tictactoe section {
