@@ -1,7 +1,11 @@
 .homepage {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	width: 100%;
+
+	@media (min-width: 1201px) {
+		flex-direction: row;
+	}
 }
 
 .left-column {
@@ -14,6 +18,11 @@
 }
 
 .right-column {
-	margin: 0 30px 0 10px;
-	width: 665px;
+	margin: 0;
+	width: 100%;
+
+	@media (min-width: 1201px) {
+		margin: 0 30px 0 10px;
+		width: 665px;
+	}
 }
