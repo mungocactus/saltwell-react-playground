@@ -18,6 +18,12 @@ export default function NavMenu() {
 					Weather
 				</NavLink>
 				<NavLink
+					to="/about-you"
+					className={({ isActive }) => (isActive ? "active" : " ")}
+				>
+					About You
+				</NavLink>
+				<NavLink
 					to="/nasa"
 					className={({ isActive }) => (isActive ? "active" : " ")}
 				>
