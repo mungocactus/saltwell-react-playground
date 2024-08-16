@@ -17,7 +17,46 @@ export default function PageAboutYou() {
 							inputPlaceholder="First Name"
 							error="Whoops!"
 						/>
-						<input></input>
+						<Inputs
+							labelFor="last"
+							labelTitle="Last Name"
+							inputType="text"
+							inputId="last"
+							inputPlaceholder="Last Name"
+							error="Whoops!"
+						/>
+						<Inputs
+							labelFor="email"
+							labelTitle="Email Address"
+							inputType="email"
+							inputId="email"
+							inputPlaceholder="Email Address"
+							error="Whoops!"
+						/>
+						<Inputs
+							labelFor="phone"
+							labelTitle="Phone Number"
+							inputType="number"
+							inputId="phone"
+							inputPlaceholder="Phone Number"
+							error="Whoops!"
+						/>
+						<Inputs
+							labelFor="birthyear"
+							labelTitle="Year of Birth"
+							inputType="number"
+							inputId="birthyear"
+							inputPlaceholder="Year of Birth"
+							error="Whoops!"
+						/>
+						<Inputs
+							labelFor="country"
+							labelTitle="Country of Birth"
+							inputType="text"
+							inputId="country"
+							inputPlaceholder="Country of Birth"
+							error="Whoops!"
+						/>
 					</form>
 					<button>Submit</button>
 				</div>

@@ -1,6 +1,6 @@
 .about-you {
 	max-width: 750px;
-	margin: 0 auto;
+	margin: 0 auto 100px;
 	text-align: center;
 
 	h2 {
@@ -8,7 +8,52 @@
 		line-height: 1;
 	}
 
+	form {
+		margin-top: 50px;
+	}
+
+	.input-container {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+
+		label {
+			color: #000;
+			font-size: 24px;
+		}
+
+		input {
+			font-family: initial;
+			font-size: 18px;
+			letter-spacing: 1px;
+			height: 30px;
+			margin-top: 3px;
+			width: 100%;
+			max-width: 500px;
+			padding-left: 20px;
+		}
+
+		::placeholder {
+			color: #ccc9c9;
+			font-family: initial;
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+
+		.input-error {
+			color: #fff;
+			margin: 3px 0 0 0;
+		}
+	}
+
 	.about-you-details {
 		display: none;
+	}
+
+	button {
+		border-radius: 7px;
+		height: 45px;
+		margin-top: 30px;
+		width: 200px;
 	}
 }

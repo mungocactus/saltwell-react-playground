@@ -7,14 +7,14 @@ export default function Inputs({
 	error,
 }) {
 	return (
-		<>
+		<div className="input-container">
 			<label for={labelFor}>{labelTitle}</label>
 			<input
 				type={inputType}
 				id={inputId}
 				placeholder={inputPlaceholder}
 			></input>
-			<p>{error}</p>
-		</>
+			<p className="input-error">{error}</p>
+		</div>
 	);
 }
