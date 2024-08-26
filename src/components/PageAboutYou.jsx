@@ -3,23 +3,14 @@ import Inputs from "./Inputs.jsx";
 import { useState } from "react";
 
 export default function PageAboutYou() {
-	// let [person, setPerson] = useState({
-	// 	first: "Paul",
-	// 	last: "Jones",
-	// 	email: "paulshess@icloud.com",
-	// 	phone: "077779133456",
-	// 	birthYear: 1961,
-	// 	country: "Australia",
-	// });
-
-	// let person = {
-	// 	first: "Paul",
-	// 	last: "Jones",
-	// 	email: "paulshess@icloud.com",
-	// 	phone: "077779133456",
-	// 	birthYear: 1961,
-	// 	country: "Australia",
-	// };
+	let [person, setPerson] = useState({
+		first: "Paul",
+		last: "Jones",
+		email: "paulshess@icloud.com",
+		phone: "077779133456",
+		birthYear: 1961,
+		country: "Australia",
+	});
 
 	let [isEditing, setIsEditing] = useState(true);
 
@@ -27,51 +18,38 @@ export default function PageAboutYou() {
 		setIsEditing((isEditing) => !isEditing);
 	}
 
-	let personalDetails = <div className="about-you-details"></div>;
+	let personalDetails = (
+		<div className="about-you-details">
+			<h2>Hello {person.first}, welcome!</h2>
+			<div className="details">
+				<h4>Details</h4>
+				<p>~</p>
+				<p>
+					Name: {person.first} {person.last}
+				</p>
+				<p>Email Address: {person.email}</p>
+				<p>Phone Number: {person.phone}</p>
+				<p>Age: {person.birthYear}</p>
+				<p>... and you were born in {person.country}</p>
+			</div>
+			<button onClick={editName}>Edit</button>
+		</div>
+	);
 
 	function handleshit(e) {
 		// Prevent the browser from reloading the page
 		e.preventDefault();
-		editName();
 
 		// Read the form data
 		const form = e.target;
 		const formData = new FormData(form);
-		console.log(form);
-		console.log(formData);
 
-		// Or you can work with it as a plain object:
-		let person = Object.fromEntries(formData.entries());
-		console.log("handle shit");
-		person.first = "Suzanne";
+		let formEntries = Object.fromEntries(formData.entries());
+		console.log("handle shit", formEntries);
+		setPerson(formEntries);
 		console.log(person);
-		personalDetails = (
-			<div className="about-you-details">
-				<h2>Hello {person.first}, welcome!</h2>
-				<div className="details">
-					<h4>Details</h4>
-					<p>~</p>
-					<p>
-						Name: {person.first} {person.last}
-					</p>
-					<p>Email Address: {person.email}</p>
-					<p>Phone Number: {person.phone}</p>
-					<p>Age: {person.birthYear}</p>
-					<p>... and you were born in {person.country}</p>
-				</div>
-				<button onClick={editName}>Edit</button>
-			</div>
-		);
-		// editName();
+		editName();
 	}
-
-	// function wollop() {
-	// 	person.first = "Suzanne";
-	// }
-
-	// wollop();
-
-	// console.log(person);
 
 	if (isEditing) {
 		personalDetails = (

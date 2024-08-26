@@ -29,6 +29,12 @@ export default function NavMenu() {
 				>
 					NASA
 				</NavLink>
+				<NavLink
+					to="/form-test"
+					className={({ isActive }) => (isActive ? "active" : " ")}
+				>
+					Form Test
+				</NavLink>
 			</nav>
 			<img src={tree} alt="silhouette of oak tree" />
 		</div>
