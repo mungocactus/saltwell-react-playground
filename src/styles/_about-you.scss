@@ -83,5 +83,9 @@
 		&:hover {
 			cursor: pointer;
 		}
+
+		&:disabled {
+			background-color: #ccc9c9;
+		}
 	}
 }
