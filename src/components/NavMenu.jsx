@@ -18,6 +18,12 @@ export default function NavMenu() {
 					Weather
 				</NavLink>
 				<NavLink
+					to="/currency-converter"
+					className={({ isActive }) => (isActive ? "active" : " ")}
+				>
+					Currency Converter
+				</NavLink>
+				<NavLink
 					to="/about-you"
 					className={({ isActive }) => (isActive ? "active" : " ")}
 				>
@@ -28,12 +34,6 @@ export default function NavMenu() {
 					className={({ isActive }) => (isActive ? "active" : " ")}
 				>
 					NASA
-				</NavLink>
-				<NavLink
-					to="/form-test"
-					className={({ isActive }) => (isActive ? "active" : " ")}
-				>
-					Form Test
 				</NavLink>
 			</nav>
 			<img src={tree} alt="silhouette of oak tree" />

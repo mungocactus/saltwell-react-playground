@@ -16,7 +16,7 @@
 		}
 
 		@media (min-width: 1201px) {
-			width: 665px;
+			width: 765px;
 		}
 	}
 
@@ -42,7 +42,7 @@
 .weather {
 	display: flex;
 	flex-direction: column;
-	// margin-top: 50px;
+	justify-content: space-between;
 	width: 100%;
 
 	@media (min-width: 501px) {
@@ -51,7 +51,7 @@
 	}
 
 	@media (min-width: 1201px) {
-		width: 665px;
+		width: 765px;
 	}
 
 	.weather-left {
