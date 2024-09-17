@@ -6,8 +6,11 @@
 	width: 100%;
 
 	@media (min-width: 501px) {
-		// flex-direction: row;
-		// margin-top: 50px;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: flex-start;
+		// margin: 50px 0;
+		// width: 100%;
 	}
 
 	@media (min-width: 701px) {
@@ -50,12 +53,21 @@
 
 .converter {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+
+	@media (min-width: 501px) {
+		flex-direction: row;
+	}
 
 	.input-container {
 		align-items: flex-start;
 		display: flex;
 		flex-direction: column;
+		margin-right: 35px;
+
+		@media (min-width: 501px) {
+			margin-right: 0;
+		}
 	}
 
 	label {
@@ -66,24 +78,34 @@
 
 	select {
 		border: solid 1px lightgrey;
-		border-radius: 7px 0 0 7px;
+		border-radius: 7px;
 		font-size: 18px;
 		letter-spacing: 1px;
 		height: 34px;
 		margin-top: 3px;
-		width: 290px;
+		width: 100%;
 		padding-left: 10px;
+
+		@media (min-width: 501px) {
+			border-radius: 7px 0 0 7px;
+			width: 290px;
+		}
 	}
 
 	input {
 		border: solid 1px lightgrey;
-		border-radius: 0 7px 7px 0;
+		border-radius: 7px;
 		font-size: 18px;
 		letter-spacing: 1px;
 		height: 30px;
 		margin-top: 3px;
-		width: 120px;
+		width: calc(100% - 14px);
 		padding-left: 10px;
+
+		@media (min-width: 501px) {
+			border-radius: 0 7px 7px 0;
+			width: 120px;
+		}
 	}
 
 	.exchange-amount {
@@ -91,13 +113,18 @@
 		color: #000;
 		background-color: #91fc8f;
 		border: solid 1px lightgrey;
-		border-radius: 0 7px 7px 0;
+		border-radius: 7px;
 		font-size: 18px;
 		letter-spacing: 1px;
 		height: 32px;
 		margin-top: 3px;
-		width: 121px;
+		width: calc(100% - 12px);
 		padding-left: 10px;
+
+		@media (min-width: 501px) {
+			border-radius: 0 7px 7px 0;
+			width: 121px;
+		}
 	}
 
 	p {
